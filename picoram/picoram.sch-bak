@@ -1,0 +1,152 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Memory_RAM:ESP-PSRAM32 U1
+U 1 1 6114BAAF
+P 5275 3925
+F 0 "U1" H 4945 3971 50  0000 R CNN
+F 1 "ESP-PSRAM32" H 4945 3880 50  0000 R CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5275 3325 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp-psram32_datasheet_en.pdf" H 4875 4425 50  0001 C CNN
+	1    5275 3925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5175 2950 4075 2950
+Wire Wire Line
+	5175 2950 5175 3425
+Wire Wire Line
+	5175 4425 5175 4500
+Wire Wire Line
+	5175 4500 5800 4500
+$Comp
+L Device:C_Small C1
+U 1 1 611508AD
+P 5800 3150
+F 0 "C1" H 5892 3196 50  0000 L CNN
+F 1 "C_Small" H 5892 3105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5800 3150 50  0001 C CNN
+F 3 "~" H 5800 3150 50  0001 C CNN
+	1    5800 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5175 2950 5800 2950
+Wire Wire Line
+	5800 2950 5800 3050
+Connection ~ 5175 2950
+Wire Wire Line
+	5800 3250 5800 4500
+$Comp
+L Connector:Conn_01x01_Female J1
+U 1 1 611519E4
+P 3875 2950
+F 0 "J1" H 3767 2725 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 3767 2816 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded" H 3875 2950 50  0001 C CNN
+F 3 "~" H 3875 2950 50  0001 C CNN
+	1    3875 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L rp2040:Pico U2
+U 1 1 611523BD
+P 9275 3400
+F 0 "U2" H 9275 4615 50  0000 C CNN
+F 1 "Pico" H 9275 4524 50  0000 C CNN
+F 2 "rp2040:RPi_Pico_SMD_TH" V 9275 3400 50  0001 C CNN
+F 3 "" H 9275 3400 50  0001 C CNN
+	1    9275 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 4500 8125 4500
+Wire Wire Line
+	8125 4500 8125 4150
+Wire Wire Line
+	8125 4150 8575 4150
+Connection ~ 5800 4500
+Wire Wire Line
+	5675 3725 6775 3725
+Wire Wire Line
+	6775 3725 6775 4250
+Wire Wire Line
+	6775 4250 8575 4250
+Wire Wire Line
+	5675 3625 6875 3625
+Wire Wire Line
+	6875 3625 6875 4050
+Wire Wire Line
+	6875 4050 8575 4050
+Wire Wire Line
+	5675 4125 6675 4125
+Wire Wire Line
+	6675 4125 6675 3950
+Wire Wire Line
+	6675 3950 8575 3950
+Wire Wire Line
+	5675 4025 6575 4025
+Wire Wire Line
+	6575 4025 6575 4350
+Wire Wire Line
+	6575 4350 8575 4350
+$Comp
+L Device:Jumper_NO_Small JP1
+U 1 1 61155CCD
+P 10500 4775
+F 0 "JP1" H 10500 4960 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 10500 4869 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 10500 4775 50  0001 C CNN
+F 3 "~" H 10500 4775 50  0001 C CNN
+	1    10500 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NO_Small JP2
+U 1 1 61156B68
+P 10500 4875
+F 0 "JP2" H 10500 5060 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 10500 4969 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 10500 4875 50  0001 C CNN
+F 3 "~" H 10500 4875 50  0001 C CNN
+	1    10500 4875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9975 4350 10750 4350
+Wire Wire Line
+	10750 4350 10750 4775
+Wire Wire Line
+	10750 4775 10600 4775
+Wire Wire Line
+	9975 4250 10850 4250
+Wire Wire Line
+	10850 4250 10850 4875
+Wire Wire Line
+	10850 4875 10600 4875
+Wire Wire Line
+	5675 3925 6000 3925
+Wire Wire Line
+	6000 3925 6000 4875
+Wire Wire Line
+	6000 4875 10400 4875
+Wire Wire Line
+	6100 3825 6100 4775
+Wire Wire Line
+	6100 4775 10400 4775
+Wire Wire Line
+	5675 3825 6100 3825
+$EndSCHEMATC
